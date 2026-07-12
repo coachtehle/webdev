@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>The Liminal Leadership Institute | Systemic Leadership Consulting</title>
+    <meta property="og:title" content="The Liminal Leadership Institute | Systemic Leadership Consulting" />
+    <meta name="twitter:title" content="The Liminal Leadership Institute | Systemic Leadership Consulting" />
+
+    <meta name="description" content="Systemic leadership consulting grounded in the Open System Model (OSM). Helping founders and executives move organizations from control to contribution."/>
+    <meta property="og:description" content="Systemic leadership consulting grounded in the Open System Model (OSM). Helping founders and executives move organizations from control to contribution." />
+    <meta name="twitter:description" content="Systemic leadership consulting grounded in the Open System Model (OSM). Helping founders and executives move organizations from control to contribution." />
+
+    <link rel="icon" type="image/x-icon" href="assets/0483d668b5459ec8507c7308119b20d3_8502.svg">
+    <link rel="apple-touch-icon" href="assets/0483d668b5459ec8507c7308119b20d3_8502.svg">
+
+    <meta property="og:image" content="assets/8c2b958cb1a6a1305ce4841f84216a69_29952.webp" />
+    <meta name="twitter:image" content="assets/8c2b958cb1a6a1305ce4841f84216a69_29952.webp">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="og:site_name" content="The Liminal Leadership Institute" />
+    <meta property="og:type" content="website" />
+    <meta name="apple-mobile-web-app-title" content="The Liminal Leadership Institute">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:locale" content="en" />
+    <meta http-equiv="content-language" content="en" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           TOKENS
+        ============================================================ */
+        :root{
+            --paper:      #F4F6F4;
+            --paper-alt:  #ECF0EC;
+            --ink:        #1B2321;
+            --ink-soft:   rgba(27,35,33,.72);
+            --ink-faint:  rgba(27,35,33,.48);
+            --line:       rgba(27,35,33,.14);
+            --line-soft:  rgba(27,35,33,.08);
+            --teal:       #2C6E5F;
+            --teal-mid:   #3E8272;
+            --teal-deep:  #12332B;
+            --teal-tint:  #E3ECE8;
+            --on-dark:    #EDF3EF;
+            --on-dark-soft: rgba(237,243,239,.74);
+            --radius: 2px;
+            --radius-interactive: 4px;
+            --max: 1180px;
+            --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+            --sans: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* ============================================================
+           RESET / BASE
+        ============================================================ */
+        *, *::before, *::after{ box-sizing: border-box; }
+        html{ scroll-behavior: smooth; overflow-x: hidden; }
+        body{
+            margin:0;
+            font-family: var(--sans);
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--ink-soft);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img{ display:block; max-width:100%; }
+        a{ color: inherit; }
+        h1,h2,h3,h4{
+            font-family: var(--serif);
+            color: var(--ink);
+            font-weight: 500;
+            line-height: 1.15;
+            margin: 0;
+            text-wrap: balance;
+        }
+        p{ margin:0; }
+        ul, ol{ margin:0; padding-left: 1.2em; }
+        blockquote{ margin:0; text-wrap: balance; }
+        button{ font-family: inherit; cursor:pointer; }
+        input, textarea{ font-family: inherit; }
+
+        :focus-visible{
+            outline: 2px solid var(--teal);
+            outline-offset: 3px;
+        }
+
+        .skip-link{
+            position: absolute;
+            left: 16px;
+            top: -60px;
+            z-index: 1000;
+            background: var(--teal-deep);
+            color: var(--on-dark);
+            padding: 12px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: top 160ms ease;
+        }
+        .skip-link:focus{ top: 16px; }
+
+        /* Fixed, non-scrolling grain to keep flat sections from feeling sterile.
+           Pre-baked 64x64 tile, single octave, no blend mode: cheap to paint and composite. */
+        body::before{
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            pointer-events: none;
+            opacity: .025;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            will-change: transform;
+        }
+
+        .wrap{
+            width: 100%;
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        section{ position: relative; }
+
+        [id]{ scroll-margin-top: 96px; }
+
+        @media (prefers-reduced-motion: reduce){
+            html{ scroll-behavior: auto; }
+            *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+        }
+
+        /* ============================================================
+           TYPE UTILITIES
+        ============================================================ */
+        .kicker{
+            display: inline-block;
+            font-family: var(--sans);
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 22px;
+        }
+        .kicker.on-dark{ color: var(--teal-mid); }
+
+        .label-quiet{
+            display: block;
+            font-family: var(--sans);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--teal);
+            margin-bottom: 14px;
+        }
+
+        h2.headline{
+            font-size: clamp(1.9rem, 1.2rem + 2.4vw, 2.9rem);
+            max-width: 18ch;
+        }
+
+        .lede{
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: clamp(1.15rem, 1rem + .6vw, 1.5rem);
+            color: var(--ink);
+            line-height: 1.55;
+            max-width: 46ch;
+        }
+
+        .prose{
+            max-width: 65ch;
+        }
+        .prose p + p{ margin-top: 22px; }
+        .prose li + li{ margin-top: 8px; }
+        .prose b{ color: var(--ink); font-weight: 600; }
+
+        .prose-wide{ max-width: 72ch; }
+        .prose-wide p + p{ margin-top: 22px; }
+
+        .caption{
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 14px;
+            color: var(--ink-faint);
+            margin-top: 18px;
+        }
+
+        .headline-sub{ font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.4rem); }
+        .u-mt-sm{ margin-top: 20px; }
+        .u-mb-0{ margin-bottom: 0; }
+        .u-mb-md{ margin-bottom: 26px; }
+        .u-mb-lg{ margin-bottom: 34px; }
+        .u-mb-xl{ margin-bottom: 48px; }
+        .u-mb-xxl{ margin-bottom: 56px; }
+
+        .btn{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: var(--sans);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: var(--radius-interactive);
+            border: 1px solid var(--teal);
+            transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 120ms ease;
+            white-space: nowrap;
+        }
+        .btn:active{ transform: translateY(1px); }
+        .btn-primary{ background: var(--teal); color: #fff; }
+        .btn-primary:hover{ background: var(--teal-deep); border-color: var(--teal-deep); }
+
+        /* ============================================================
+           NAV
+        ============================================================ */
+        .nav{
+            position: fixed;
+            top:0; left:0; right:0;
+            z-index: 500;
+            background: rgba(244,246,244,.86);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line-soft);
+        }
+        .nav-inner{
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .nav-links{
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+        .nav-links a{
+            font-size: 14.5px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color 150ms ease;
+        }
+        .nav-links a:hover{ color: var(--teal); }
+        .nav-brand{
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 15px;
+            color: var(--ink);
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 24px;
+        }
+        @media (max-width: 1180px){
+            .nav-brand{ display: none; }
+        }
+        .nav-links a.is-active, .nav-mobile a.is-active{ color: var(--teal); font-weight: 600; }
+
+        .nav-toggle{
+            display: none;
+            width: 40px; height: 40px;
+            border: 1px solid var(--line);
+            background: transparent;
+            border-radius: var(--radius-interactive);
+            position: relative;
+            flex-shrink: 0;
+        }
+        .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+            content: "";
+            position: absolute;
+            left: 10px; right: 10px;
+            height: 1px;
+            background: var(--ink);
+            transition: transform 200ms ease, opacity 200ms ease;
+        }
+        .nav-toggle span{ top: 19px; }
+        .nav-toggle span::before{ top: -6px; }
+        .nav-toggle span::after{ top: 6px; }
+        .nav-toggle[aria-expanded="true"] span{ background: transparent; }
+        .nav-toggle[aria-expanded="true"] span::before{ transform: translateY(6px) rotate(45deg); }
+        .nav-toggle[aria-expanded="true"] span::after{ transform: translateY(-6px) rotate(-45deg); }
+
+        .nav-mobile{
+            display: none;
+            flex-direction: column;
+            padding: 8px 32px 28px;
+            border-top: 1px solid var(--line-soft);
+            background: var(--paper);
+        }
+        .nav-mobile a{
+            padding: 13px 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--line-soft);
+        }
+        .nav.is-open .nav-mobile{ display: flex; }
+
+        @media (max-width: 1024px){
+            .nav-links{ display: none; }
+            .nav-toggle{ display: block; }
+        }
+
+        /* ============================================================
+           HERO
+        ============================================================ */
+        .hero{
+            background: var(--teal-deep);
+            padding: 96px 0 120px;
+            display: flex;
+            align-items: center;
+            min-height: 78dvh;
+        }
+        .hero-mark{
+            width: 46px;
+            height: auto;
+            opacity: .9;
+            margin-bottom: 34px;
+        }
+        .hero h1{
+            color: var(--on-dark);
+            font-size: clamp(2.5rem, 1.6rem + 3vw, 4.1rem);
+            line-height: 1.1;
+            max-width: 16ch;
+            margin-bottom: 36px;
+        }
+        .hero blockquote{
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--on-dark);
+            font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem);
+            line-height: 1.5;
+            max-width: 34ch;
+            border-left: 2px solid var(--teal-mid);
+            padding-left: 22px;
+        }
+        .hero cite{
+            display: block;
+            font-style: normal;
+            font-family: var(--sans);
+            font-size: 14px;
+            color: var(--on-dark-soft);
+            margin-top: 14px;
+        }
+        .hero .btn{ margin-top: 44px; }
+
+        /* ============================================================
+           SECTION RHYTHM
+        ============================================================ */
+        .section{ padding: 120px 0 136px; border-bottom: 1px solid var(--line-soft); }
+        .section.alt{ background: var(--paper-alt); }
+        .section-tight{ padding: 90px 0 102px; }
+
+        @media (max-width: 768px){
+            .section{ padding: 80px 0 90px; }
+            .section-tight{ padding: 60px 0 68px; }
+            .hero{ padding: 104px 0 72px; }
+        }
+
+        /* ============================================================
+           WHY NOW
+        ============================================================ */
+        .why-now{ overflow: hidden; }
+        .why-now-decor{
+            position: absolute;
+            top: -6%;
+            right: -22%;
+            width: 620px;
+            opacity: .05;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .why-now .wrap{ position: relative; z-index: 1; }
+
+        .intro-block{ max-width: 62ch; }
+        .intro-block .lede{ max-width: 56ch; margin-bottom: 26px; }
+
+        .symptom-lead{
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--ink);
+            margin: 44px 0 34px;
+        }
+        .why-now-photo{ margin: 8px 0 44px; }
+        .why-now-photo img{ height: 320px; object-fit: cover; }
+        @media (max-width: 700px){
+            .why-now-photo img{ height: 220px; }
+        }
+
+        .symptom-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+        .symptom-card{
+            background: var(--paper);
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            border-radius: var(--radius);
+        }
+        .symptom-card h4{
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
+        .symptom-card p{ margin-bottom: 22px; }
+        .card-footer{ margin-top: auto; }
+        .escalation{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line-soft);
+        }
+        .escalation-dot{
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--line);
+        }
+        .escalation-dot.is-filled{ background: var(--teal); }
+        .misread{ margin-top: 14px; }
+        .misread-text p:first-child{
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ink-faint);
+            margin-bottom: 2px;
+        }
+        .misread-text p:last-child{ font-size: 15px; color: var(--ink); }
+
+        @media (max-width: 900px){
+            .symptom-grid{ grid-template-columns: 1fr; }
+        }
+
+        .chart-frame{
+            margin-top: 64px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 8px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .photo-frame{
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .photo-frame img{ display: block; width: 100%; }
+
+        /* ============================================================
+           INTRO (manifesto)
+        ============================================================ */
+        .manifesto{ text-align: center; }
+        .manifesto .wrap{ display: flex; flex-direction: column; align-items: center; }
+        .manifesto h2{ max-width: 22ch; margin-bottom: 30px; }
+        .manifesto .lede{ margin: 0 auto 34px; text-align: left; }
+        .manifesto .prose{ text-align: left; margin: 0 auto; }
+        .manifesto .btn{ margin-top: 40px; }
+
+        /* ============================================================
+           HOW WE WORK
+        ============================================================ */
+        .principles{ margin: 56px 0 48px; }
+        .principle-row{
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 40px;
+            padding: 30px 0;
+            border-top: 1px solid var(--line);
+        }
+        .principle-row:last-child{ border-bottom: 1px solid var(--line); }
+        .principle-row h4{ font-size: 1.35rem; }
+        @media (max-width: 700px){
+            .principle-row{ grid-template-columns: 1fr; gap: 10px; }
+        }
+
+        /* ============================================================
+           SELF-CHECK
+        ============================================================ */
+        .selfcheck-head{ max-width: 60ch; margin-bottom: 12px; }
+
+        /* ============================================================
+           WHO WE ARE
+        ============================================================ */
+        .osm-panel{
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 44px;
+            align-items: stretch;
+            margin: 44px 0 90px;
+        }
+        .osm-card{
+            background: var(--teal-deep);
+            color: var(--on-dark);
+            padding: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: var(--radius);
+        }
+        .osm-card h4{ color: var(--on-dark); margin-bottom: 16px; font-size: 1.4rem; }
+        .osm-card p{ color: var(--on-dark-soft); }
+        .osm-card-diagram{
+            margin-top: 24px;
+            border: 1px solid rgba(237,243,239,.18);
+            border-radius: var(--radius);
+            background: rgba(237,243,239,.04);
+            padding: 8px;
+        }
+        .osm-card-diagram img{ display: block; width: 100%; }
+        @media (max-width: 860px){
+            .osm-panel{ grid-template-columns: 1fr; }
+        }
+
+        .vision-block{ margin-top: 24px; }
+        .vision-prose{ margin-top: 34px; }
+
+        .full-photo{ overflow: hidden; }
+        .full-photo img{ width: 100%; height: 60dvh; object-fit: cover; display: block; }
+        .full-photo.breakout{
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            margin-top: 64px;
+            margin-bottom: 64px;
+        }
+        @media (max-width: 700px){
+            .full-photo img{ height: 42dvh; }
+        }
+
+
+        /* ============================================================
+           NEXT STEPS
+        ============================================================ */
+        .step-row{
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 48px;
+            padding: 34px 0;
+            border-top: 1px solid var(--teal);
+        }
+        .step-row:last-of-type{ border-bottom: 1px solid var(--teal); margin-bottom: 48px; }
+        .step-if{
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--ink-faint);
+        }
+        .step-then{
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--teal);
+        }
+        .step-row > div > p:last-child{ margin-top: 8px; font-family: var(--sans); font-style: normal; font-size: 16px; color: var(--ink-soft); }
+        @media (max-width: 760px){
+            .step-row{ grid-template-columns: 1fr; gap: 14px; }
+        }
+        .invitation{ max-width: 60ch; margin-bottom: 40px; }
+        .steps-cta{ display: flex; justify-content: center; }
+
+        /* ============================================================
+           PRACTITIONERS
+        ============================================================ */
+        .practitioners-head{ text-align: center; }
+        .practitioners-head h2{ max-width: none; margin: 0 auto; }
+
+        .pull-quote{
+            position: relative;
+            min-height: 46dvh;
+            display: flex;
+            align-items: flex-end;
+            background-image: var(--pq-bg);
+            background-size: cover;
+            background-position: var(--pq-pos, 50% 50%);
+            padding: 60px 0;
+            border-top: 1px solid var(--teal-mid);
+        }
+        .pull-quote--tight{ min-height: 38dvh; }
+        .pull-quote--center{ min-height: 52dvh; align-items: center; }
+        .pull-quote::before{
+            content:"";
+            position:absolute; inset:0;
+            background: linear-gradient(180deg, rgba(18,51,43,.35) 0%, rgba(18,51,43,.82) 100%);
+        }
+        .pull-quote .wrap{ position: relative; z-index: 1; }
+        .pull-quote blockquote{
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--on-dark);
+            font-size: clamp(1.3rem, 1rem + 1.3vw, 2rem);
+            max-width: 30ch;
+            line-height: 1.4;
+        }
+        .pull-quote cite{
+            display: block;
+            font-style: normal;
+            font-size: 14px;
+            color: var(--on-dark-soft);
+            margin-top: 18px;
+        }
+
+        .bio{
+            padding: 96px 0;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .bio-photo{
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+        .bio--last{ border-bottom: 1px solid var(--line-soft); }
+        .bio h3{ font-size: 1.8rem; margin-bottom: 18px; text-align: left; }
+        @media (max-width: 800px){
+            .bio{ grid-template-columns: 1fr; padding: 64px 0; }
+            .bio-photo{ max-width: 260px; }
+        }
+
+        /* ============================================================
+           TRUSTED-BY LOGO MARQUEE
+        ============================================================ */
+        .logo-strip{ text-align: center; }
+        .logo-strip .label-quiet{ display: inline-block; }
+        .logo-marquee{
+            overflow: hidden;
+            margin-top: 34px;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+        }
+        .logo-track{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            gap: 76px;
+            animation: logo-scroll 80s linear infinite;
+        }
+        .logo-marquee:hover .logo-track{ animation-play-state: paused; }
+        .logo-track img{
+            height: 46px;
+            width: auto;
+            display: block;
+            opacity: .8;
+            transition: opacity 150ms ease;
+        }
+        .logo-track img:hover{ opacity: 1; }
+        @keyframes logo-scroll{
+            from{ transform: translateX(0); }
+            to{ transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce){
+            .logo-track{ animation: none; flex-wrap: wrap; justify-content: center; width: auto; }
+        }
+
+
+        /* ============================================================
+           TESTIMONIALS
+        ============================================================ */
+        .testimonials-head{ text-align: center; }
+        .testimonials-head h2{ margin: 0 auto 8px; }
+        .testimonials-head .lede{ margin: 0 auto; text-align: center; }
+
+        .testimonial-carousel{
+            max-width: 780px;
+            margin: 48px auto 0;
+            position: relative;
+        }
+        .testimonial-track{ position: relative; min-height: 260px; }
+        .testimonial-slide{
+            display: none;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: left;
+        }
+        .testimonial-slide.is-active{ display: block; }
+        .testimonial-tag{
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--ink-faint);
+            margin-bottom: 20px;
+        }
+        .testimonial-slide blockquote{
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.55;
+            color: var(--ink);
+        }
+        .testimonial-attribution{ margin-top: 22px; font-size: 15px; }
+        .testimonial-attribution b{ color: var(--ink); font-weight: 600; }
+        .testimonial-attribution span{ color: var(--ink-faint); }
+
+        .testimonial-controls{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            margin-top: 28px;
+        }
+        .testimonial-arrow{
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: var(--radius-interactive);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink);
+            transition: border-color 150ms ease, color 150ms ease;
+        }
+        .testimonial-arrow:hover{ border-color: var(--teal); color: var(--teal); }
+        .testimonial-dots{ display: flex; gap: 8px; }
+        .testimonial-dot{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            padding: 0;
+            background: var(--line);
+        }
+        .testimonial-dot.is-active{ background: var(--teal); }
+        @media (max-width: 600px){
+            .testimonial-slide{ padding: 28px; }
+        }
+
+        /* ============================================================
+           CONTACT
+        ============================================================ */
+        .contact-grid{
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 64px;
+        }
+        .contact-intro h2{ margin-bottom: 18px; }
+        @media (max-width: 860px){
+            .contact-grid{ grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        form{ display: flex; flex-direction: column; gap: 22px; }
+        .field{ display: flex; flex-direction: column; gap: 8px; }
+        .field label{ font-size: 13.5px; font-weight: 600; color: var(--ink); letter-spacing: .02em; }
+        .field input, .field textarea{
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            padding: 13px 14px;
+            font-size: 15px;
+            border-radius: var(--radius-interactive);
+        }
+        .field input::placeholder, .field textarea::placeholder{ color: var(--ink-faint); }
+        .field input:focus, .field textarea:focus{ border-color: var(--teal); }
+        .field input:invalid:not(:placeholder-shown), .field textarea:invalid:not(:placeholder-shown){ border-color: #9a3b2c; }
+        .field textarea{ min-height: 130px; resize: vertical; }
+        form .btn{ align-self: flex-start; }
+
+        /* ============================================================
+           CLOSING
+        ============================================================ */
+        .closing{
+            background: linear-gradient(200deg, var(--ink) 0%, var(--teal-deep) 100%);
+            padding: 100px 0;
+            text-align: center;
+            border-top: 1px solid var(--teal-mid);
+        }
+        .closing blockquote{
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--on-dark);
+            font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+            max-width: 40ch;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        .closing cite{
+            display: block;
+            font-style: normal;
+            font-size: 14px;
+            color: var(--on-dark-soft);
+            margin-top: 20px;
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        .site-footer{ padding: 32px 0; }
+        .identity-signature{
+            text-align: center;
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 13.5px;
+            color: var(--ink-faint);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--line-soft);
+        }
+        .footer-inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        .footer-inner p{ font-size: 13px; color: var(--ink-faint); }
+        .footer-legal{ display: flex; gap: 24px; }
+        .footer-legal a{ font-size: 13px; color: var(--ink-soft); text-decoration: none; }
+        .footer-legal a:hover{ color: var(--teal); }
+
+        /* ============================================================
+           REVEAL (subtle, motivated: sequence emphasis on scroll)
+        ============================================================ */
+        .reveal{ opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms ease; }
+        .reveal.is-visible{ opacity: 1; transform: translateY(0); }
+        @media (prefers-reduced-motion: reduce){
+            .reveal{ opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="nav" id="navRoot">
+        <div class="nav-inner">
+            <nav class="nav-links" aria-label="Primary">
+                <a href="#whynow">Why Now</a>
+                <a href="#intro">Intro</a>
+                <a href="#howwework">How we Work</a>
+                <a href="#selfcheck">Self-Check</a>
+                <a href="#whoweare">Who We Are</a>
+                <a href="#practitioners">Practitioners</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-brand">The Liminal Leadership Institute</div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+        </div>
+        <div class="nav-mobile" id="navMobile">
+            <a href="#whynow">Why Now</a>
+            <a href="#intro">Intro</a>
+            <a href="#howwework">How we Work</a>
+            <a href="#selfcheck">Self-Check</a>
+            <a href="#whoweare">Who We Are</a>
+            <a href="#practitioners">Practitioners</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section class="hero">
+            <div class="wrap">
+                <img src="assets/a68b920cdcebd470f503643f1f00726f_8139.svg" loading="lazy" alt="" class="hero-mark">
+                <h1>Keenness of understanding is due to keenness of vision.</h1>
+                <blockquote>
+                    We take responsibility to nurture a sense of belonging and true identity in the systems we steward, in service to the unity of humanity.
+                </blockquote>
+                <a href="#contact" class="btn btn-primary">Start with a Conversation</a>
+            </div>
+        </section>
+
+        <section class="pull-quote pull-quote--center" style="--pq-bg:url(https://images.pexels.com/photos/28390199/pexels-photo-28390199.jpeg?auto=compress&cs=tinysrgb&w=1600);">
+            <div class="wrap">
+                <blockquote>“Doing well by doing good is not only possible—it is the only way to do business in the future."
+                    <cite>~Ray Anderson</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="whynow" class="section why-now">
+            <img src="assets/a68b920cdcebd470f503643f1f00726f_8139.svg" loading="lazy" alt="" class="why-now-decor">
+            <div class="wrap">
+                <span class="kicker reveal">Why now</span>
+                <div class="intro-block reveal">
+                    <h2 class="headline u-mb-md">The lone wolf is over.<br>The future is collective.</h2>
+                    <p class="lede">Hierarchical structures, where power is concentrated at the top, were once the norm.</p>
+                    <div class="prose">
+                        <p>The world has changed. Today's organizations operate in conditions of profound complexity and interdependence. Traditional, rigid approaches are no longer sufficient because they no longer serve the current needs of humanity. Systems that fail to recognize this shift, from hierarchical highly-dependent to more collective and interdependent forms of organization, stagnate, disintegrate, and are doomed to fail.</p>
+                        <p>That disintegration doesn't happen all at once. It moves through intensifying stages of escalation, each one observable, each one a sign that the system has lost its systemic connectivity to the greater whole. And, it is rarely felt at the top first. Everything seems right in the control room, while things are failing on the launch pad.</p>
+                    </div>
+                </div>
+
+                <div class="photo-frame why-now-photo reveal">
+                    <img src="https://images.pexels.com/photos/16785255/pexels-photo-16785255.jpeg?auto=compress&cs=tinysrgb&w=1600" loading="lazy" alt="Close-up of weathered ancient stone columns of the Acropolis against a blue sky.">
+                </div>
+
+                <p class="symptom-lead reveal">What follows are the signs of disintegration at the symptomatic level:</p>
+
+                <div class="symptom-grid reveal">
+                    <div class="symptom-card">
+                        <h4>Demotivation and disorientation</h4>
+                        <p>When the connection to a higher purpose breaks, orientation goes with it. People can no longer derive their function, their meaning, or their reason to bring their best. What fills the space is anxiety, frustration, confusion and quite quitting. Leadership responds with motivation events. It does not work, because the problem is not motivational. It is systemical.</p>
+                        <div class="card-footer">
+                            <div class="escalation" aria-hidden="true">
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot"></span>
+                                <span class="escalation-dot"></span>
+                                <span class="escalation-dot"></span>
+                            </div>
+                            <div class="misread">
+                                <div class="misread-text">
+                                    <p>Easy to misread as:</p>
+                                    <p>A morale problem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="symptom-card">
+                        <h4>An increase in conflicts and bottlenecks</h4>
+                        <p>Without a clear functional structure, people fall back on personal relationships and informal loyalties. Misplaced trust, communication breakdown, and power struggles follow. Leadership tells people to be professional, set aside their feelings, work it out. This also does not work, because conflict at this stage is not personal. It is a signal that the system has lost its structural center.</p>
+                        <div class="card-footer">
+                            <div class="escalation" aria-hidden="true">
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot"></span>
+                                <span class="escalation-dot"></span>
+                            </div>
+                            <div class="misread">
+                                <div class="misread-text">
+                                    <p>Easy to misread as:</p>
+                                    <p>A people problem and finding the guilty one. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="symptom-card">
+                        <h4>Fluctuations and increases in absences</h4>
+                        <p>First internally, then formally. Turnover rises. Absences multiply. Leadership responds with terminations and personnel changes, placing the cause on individuals rather than the system. This accelerates the drift. The people who leave are not the problem. They are the evidence.</p>
+                        <div class="card-footer">
+                            <div class="escalation" aria-hidden="true">
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot"></span>
+                            </div>
+                            <div class="misread">
+                                <div class="misread-text">
+                                    <p>Easy to misread as:</p>
+                                    <p>A talent problem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="symptom-card">
+                        <h4>Solidarity against a common enemy</h4>
+                        <p>This is the final stage, because it looks like recovery, a wrong sense of unity. People unite against an enemy. Energy returns, a sense of purpose reappears. But look closer: the unity is not around a shared mission. It is against a shared threat. Conformity. The enemy is interchangeable. When no external one exists, an internal scapegoat will do. This is not cohesion. It is the final signal before collapse.</p>
+                        <div class="card-footer">
+                            <div class="escalation" aria-hidden="true">
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot is-filled"></span>
+                                <span class="escalation-dot is-filled"></span>
+                            </div>
+                            <div class="misread">
+                                <div class="misread-text">
+                                    <p>Easy to misread as:</p>
+                                    <p>A turning point</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-frame reveal">
+                    <img src="assets/b9cf7ff1334fdabce4294d149a94071f_96174.webp" loading="lazy" alt="Open System Model chart illustrating stages of organizational disintegration.">
+                </div>
+                <p class="caption">All charts and images used with permission. The Open System Model (OSM®). Kambiz Poostchi.</p>
+            </div>
+        </section>
+
+        <section id="intro" class="section manifesto alt">
+            <div class="wrap">
+                <h2 class="headline reveal">From control to contribution</h2>
+                <p class="lede reveal">We are looking at a shift of paradigm. A shift from power to empowerment, from control to contribution, from centralized to decentralized systems.</p>
+                <div class="prose reveal">
+                    <p>The world is more connected, more complex, and more interdependent than it has ever been. The old playbook—fix the parts, optimize the individuals, manage the symptoms—has reached its limit.The effort is there. The alignment isn't. The problems that arise are systemic in nature, and you cannot solve a systemic problem with fragmented thinking.</p>
+                    <p>Today, being future-ready requires far more from companies and organizations than simply ensuring their economic success. People—both within organizations and in their private lives—are increasingly seeking meaning and fulfillment.</p>
+                    <p>The next frontier in business requires a necessary evolution in how companies understand themselves and the world they operate in. The companies that will thrive are the ones that learn to see the whole first, and derive everything else from there.</p>
+                    <p>In this context, leadership carries a particularly important responsibility: to exercise systemic principles and to foster environments where people and organizations can prosper.&nbsp;</p>
+                    <p>When such a vision is clear, understanding, decision-making, action, and reflection are all within reach. Success becomes sustainable, relationships strengthen, and a lived culture of collaboration emerges.</p>
+                </div>
+                <a href="#contact" class="btn btn-primary reveal">Start with a Conversation</a>
+            </div>
+        </section>
+
+        <div class="full-photo">
+            <img src="https://images.pexels.com/photos/13327590/pexels-photo-13327590.jpeg?auto=compress&cs=tinysrgb&w=1600" loading="lazy" alt="Aerial view of the Grand Canyon rim, showing dramatic cliffs and layered rock formations.">
+        </div>
+
+        <section id="howwework" class="section">
+            <div class="wrap">
+                <span class="label-quiet reveal">How we work</span>
+                <h2 class="headline reveal u-mb-md">An evolution of consciousness, not a management technique.</h2>
+                <p class="lede reveal">People who truly feel a sense of belonging will go the extra mile for their organization.</p>
+                <p class="prose reveal u-mt-sm">However, belonging requires something to belong to. It must be clear what the organization or team stands for, the purpose it serves, and the values and principles that guide its actions.</p>
+
+                <div class="principles reveal">
+                    <div class="principle-row">
+                        <h4>Awareness</h4>
+                        <p>Awareness means having the courage to recognize early signals of change and responding to them proactively. The long-term success of any organization depends on its willingness and ability to learn and adapt.</p>
+                    </div>
+                    <div class="principle-row">
+                        <h4>Affiliation</h4>
+                        <p>A strong sense of belonging requires a clear purpose, shared values, and well-defined principles that people can identify with. A culture of respect and appreciation is where every individual is valued regardless of their role or position.</p>
+                    </div>
+                    <div class="principle-row">
+                        <h4>Order</h4>
+                        <p>Order provides the structure that enables an organization to make decisions and act effectively in pursuit of their mission. Leadership's function is to keep the company connected to what it serves, to own the vision. The health of the parts depends on the health of the whole.</p>
+                    </div>
+                </div>
+
+                <p class="prose reveal u-mb-xxl">These three interrelated principles govern all social systems and serve as pillars of mature organizations. Like gravity, one may question them—but ignore them, and the fall is inevitable. Systemic maturation is the daily practice of these principles in the life of an organization. The consequence is interdependence: responsibility that extends beyond self and team to the whole.</p>
+
+                <div class="chart-frame reveal">
+                    <img src="assets/5b7ffbb238ca9742ef937931835626d8_110532.webp" loading="lazy" alt="Open System Model chart illustrating Awareness, Affiliation, and Order.">
+                </div>
+                <p class="caption">All charts and images used with permission. The Open System Model (OSM®). Kambiz Poostchi.</p>
+            </div>
+        </section>
+
+        <section id="selfcheck" class="section alt">
+            <div class="wrap">
+                <h2 class="headline selfcheck-head reveal">A 90-second self-check</h2>
+                <p class="lede reveal u-mb-xl">Are you Leading or Simply Managing?<br>Seven Reflection Questions for Your System</p>
+
+                <div class="reveal"><style>
+  .selfcheck-embed{
+    --sc-accent: var(--teal);
+    --sc-text: var(--ink);
+    --sc-muted: var(--ink-soft);
+    --sc-dim: var(--ink-faint);
+    --sc-line: var(--line);
+    --sc-radius: 2px;
+  }
+
+  .self-check-diagnostic{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:28px;
+    align-items:stretch;
+    margin-top:8px;
+  }
+
+  .self-check-score-card{
+    padding:32px;
+    border-radius:var(--sc-radius);
+    background:#ffffff;
+    border:1px solid var(--sc-line);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:100%;
+  }
+
+  .self-check-score-card h3{ font-size: 1.3rem; }
+  .self-check-score-card .sc-note{ margin-top:10px; font-size:14px; color:var(--sc-muted); margin-bottom:0; }
+
+  .self-check-score-ring-container{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px 0;
+  }
+
+  .self-check-score-ring{
+    width:220px;
+    height:220px;
+    border-radius:999px;
+    display:grid;
+    place-items:center;
+    background: conic-gradient(var(--sc-accent) calc(var(--score) * 1%), rgba(27,35,33,.08) 0);
+    position:relative;
+  }
+  .self-check-score-ring::before{
+    content:"";
+    position:absolute;
+    inset:14px;
+    border-radius:inherit;
+    background:#ffffff;
+    border:1px solid var(--sc-line);
+  }
+  .self-check-score-ring .self-check-score-inner{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    max-width:170px;
+  }
+  .self-check-score-ring strong{
+    font-family: var(--serif);
+    font-size:48px;
+    color:var(--sc-text);
+    display:block;
+    line-height:1;
+  }
+  .self-check-score-ring span{
+    display:block;
+    color:var(--sc-muted);
+    font-size:12px;
+    margin-top:12px;
+    line-height:1.4;
+  }
+
+  .self-check-range-list{
+    display:grid;
+    gap:14px;
+    padding:32px;
+    border-radius:var(--sc-radius);
+    background:#ffffff;
+    border:1px solid var(--sc-line);
+    height:100%;
+  }
+  .self-check-range-row{
+    display:grid;
+    grid-template-columns:1fr 56px;
+    gap:14px;
+    align-items:center;
+  }
+  .self-check-range-row label{
+    font-weight:600;
+    font-size:14px;
+    line-height:1.25;
+    color:var(--sc-text);
+  }
+  .self-check-range-row small{
+    display:block;
+    color:var(--sc-muted);
+    font-weight:400;
+    margin-top:4px;
+    font-size:13px;
+  }
+  .self-check-range-row input[type="range"]{
+    width:100%;
+    accent-color:var(--sc-accent);
+  }
+  .self-check-value{
+    color:var(--sc-accent);
+    font-weight:700;
+    text-align:right;
+    font-size:14px;
+  }
+
+  .self-check-mini{
+    padding:18px 0 0;
+    margin-top:16px;
+    border-top: 1px solid var(--sc-line);
+  }
+  .self-check-mini b{
+    color:var(--sc-text);
+    font-size:14.5px;
+  }
+  .self-check-mini p{
+    color:var(--sc-muted);
+    font-size:14px;
+    margin-top:8px;
+    line-height:1.5;
+  }
+
+  @media (max-width: 880px){
+    .self-check-diagnostic{grid-template-columns:1fr}
+    .self-check-score-card{height:auto}
+    .self-check-score-ring{width:180px;height:180px}
+    .self-check-range-list{height:auto}
+  }
+</style>
+  <div class="selfcheck-embed">
+  <div class="self-check-diagnostic">
+    <div class="self-check-score-card">
+      <div>
+        <h3>Leadership Clarity Signal</h3>
+        <p class="sc-note">Higher score = stronger leadership orientation vs. management mode.</p>
+      </div>
+      <div class="self-check-score-ring-container">
+        <div class="self-check-score-ring" id="scScoreRing" style="--score:68">
+          <div class="self-check-score-inner">
+            <strong id="scScoreNum">68</strong>
+            <span id="scScoreLabel">Moderate leadership<br />clarity</span>
+          </div>
+        </div>
+      </div>
+      <div class="self-check-mini">
+        <b id="scScoreHeadline">Your organization has purpose but may lack operational alignment.</b>
+        <p id="scScoreCopy">Focus on connecting mission to daily decisions and creating clear ownership structures.</p>
+      </div>
+    </div>
+
+    <div class="self-check-range-list">
+      <div class="self-check-range-row">
+        <div>
+          <label for="scr1">Strength of Affiliation</label>
+          <small>To what extent is our organization's purpose truly derived from a genuine societal need or challenge?</small>
+          <input class="self-check-slider" id="scr1" type="range" min="0" max="10" value="7" />
+        </div>
+        <div class="self-check-value" id="sv1">7/10</div>
+      </div>
+
+      <div class="self-check-range-row">
+        <div>
+          <label for="scr2">Mission Focus</label>
+          <small>How actively do our leaders focus on fulfilling our organizational mission?</small>
+          <input class="self-check-slider" id="scr2" type="range" min="0" max="10" value="6" />
+        </div>
+        <div class="self-check-value" id="sv2">6/10</div>
+      </div>
+
+      <div class="self-check-range-row">
+        <div>
+          <label for="scr3">Philosophy &amp; Purpose</label>
+          <small>To what extent does our organizational philosophy inspire employees through a meaningful sense of purpose and shared values?</small>
+          <input class="self-check-slider" id="scr3" type="range" min="0" max="10" value="6" />
+        </div>
+        <div class="self-check-value" id="sv3">6/10</div>
+      </div>
+
+      <div class="self-check-range-row">
+        <div>
+          <label for="scr4">Collaboration &amp; Teamwork</label>
+          <small>How effectively does our organization foster information sharing, teamwork, and shared responsibility?</small>
+          <input class="self-check-slider" id="scr4" type="range" min="0" max="10" value="7" />
+        </div>
+        <div class="self-check-value" id="sv4">7/10</div>
+      </div>
+
+      <div class="self-check-range-row">
+        <div>
+          <label for="scr5">Communication &amp; Feedback</label>
+          <small>How open is our communication, and how healthy is our dialogue and feedback culture?</small>
+          <input class="self-check-slider" id="scr5" type="range" min="0" max="10" value="6" />
+        </div>
+        <div class="self-check-value" id="sv5">6/10</div>
+      </div>
+
+      <div class="self-check-range-row">
+        <div>
+          <label for="scr6">Employee Development</label>
+          <small>To what extent are we genuinely committed to the development and growth of our employees?</small>
+          <input class="self-check-slider" id="scr6" type="range" min="0" max="10" value="7" />
+        </div>
+        <div class="self-check-value" id="sv6">7/10</div>
+      </div>
+
+      <div class="self-check-range-row">
+        <div>
+          <label for="scr7">Root Cause vs Carrier</label>
+          <small>How effectively does our organization distinguish between the root cause and the system carrier?</small>
+          <input class="self-check-slider" id="scr7" type="range" min="0" max="10" value="6" />
+        </div>
+        <div class="self-check-value" id="sv7">6/10</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<script>
+  (function(){
+    const scSliders = document.querySelectorAll('.self-check-slider');
+    const scScoreRing = document.getElementById('scScoreRing');
+    const scScoreNum = document.getElementById('scScoreNum');
+    const scScoreLabel = document.getElementById('scScoreLabel');
+    const scScoreHeadline = document.getElementById('scScoreHeadline');
+    const scScoreCopy = document.getElementById('scScoreCopy');
+    const scValueElements = [
+      document.getElementById('sv1'),
+      document.getElementById('sv2'),
+      document.getElementById('sv3'),
+      document.getElementById('sv4'),
+      document.getElementById('sv5'),
+      document.getElementById('sv6'),
+      document.getElementById('sv7')
+    ];
+
+    function scComputeScore(){
+      let sum = 0;
+      scSliders.forEach(s => sum += Number(s.value));
+      const score = Math.round(sum / (scSliders.length * 10) * 100);
+
+      scSliders.forEach((s, i) => {
+        if(scValueElements[i]) {
+          scValueElements[i].textContent = s.value + '/10';
+        }
+      });
+
+      scScoreRing.style.setProperty('--score', score);
+      scScoreNum.textContent = score;
+
+      let label, headline, copy;
+      if(score < 40){
+        label='Low leadership<br />clarity';
+        headline='Management mode dominates.';
+        copy='Critical work on mission clarity, purpose alignment, and leadership focus needed before sustainable growth.';
+      } else if(score < 60){
+        label='Emerging<br />leadership';
+        headline='Purpose exists but lacks consistent application.';
+        copy='Connect mission to daily operations and establish clearer ownership structures for impact.';
+      } else if(score < 78){
+        label='Moderate leadership<br />clarity';
+        headline='Your organization has purpose but may lack operational alignment.';
+        copy='Focus on translating values into decisions and creating systems that enable employee contribution.';
+      } else {
+        label='Strong leadership<br />orientation';
+        headline='Organization demonstrates clear leadership-principled behavior.';
+        copy='Continue reinforcing systems while staying vigilant about maintaining authenticity at scale.';
+      }
+      scScoreLabel.innerHTML = label;
+      scScoreHeadline.textContent = headline;
+      scScoreCopy.textContent = copy;
+    }
+
+    scSliders.forEach(s => s.addEventListener('input', scComputeScore));
+    scComputeScore();
+  })();
+</script>
+                </div>
+            </div>
+        </section>
+
+        <section id="whoweare" class="section">
+            <div class="wrap">
+                <span class="label-quiet reveal">Who we are</span>
+                <h3 class="headline headline-sub reveal u-mb-lg">The idea is the reality.</h3>
+
+                <div class="osm-panel reveal">
+                    <div class="prose">
+                        <p>We see ourselves as pioneers and practitioners on a continuous learning journey, helping people take responsibility for the systems they belong to and find their unique place within them.</p>
+                        <p>Companies and teams become genuinely capable of learning together when they have clearly defined their purpose, their place, and their mission. <br>The questions underneath: </p>
+                        <ul>
+                            <li><b>Which larger system does the work serve? </b></li>
+                            <li><b>What needs does it fulfill?</b></li>
+                        </ul>
+                        <p>Identity is not determined by behavior alone. It is shaped by belonging to a greater whole–and from that belonging, an organization's values, capabilities, and ultimately its actions follow.</p>
+                    </div>
+                    <div class="osm-card">
+                        <h4>The Open System Model® (OSM)</h4>
+                        <p>Our work is grounded in the Open System Model® (OSM), state of the art in leadership development, which treats individuals and organizations as what they are—living systems: connected, purposeful, and responsible to the larger whole.</p>
+                        <div class="osm-card-diagram">
+                            <img src="assets/4a8e60024f6dbba38580ffca20cb28e3_92464.webp" loading="lazy" alt="Diagram of the Interdependent Open System: a subsystem network exchanging information, energy, and matter with a superordinate system and partner systems.">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="full-photo breakout">
+                <img src="https://images.pexels.com/photos/30596249/pexels-photo-30596249.jpeg?auto=compress&cs=tinysrgb&w=1600" loading="lazy" alt="Earth at night viewed from space, showing the curvature of the globe and city lights across continents.">
+            </div>
+
+            <div class="wrap">
+                <div class="vision-block reveal">
+                    <h3 class="headline headline-sub u-mb-0">Let the vision be world-embracing.</h3>
+                    <div class="prose-wide vision-prose">
+                        <p>In a social environment increasingly characterized by the erosion of values and the loss of meaning; the cult of individualism and emotional detachment; a lack of mindfulness, commitment, and responsibility; excessive competition and the pursuit of hedonistic goals; and the fear of difference alongside injustice, we are witnessing a growing need among people, both in society and within organizations, for a more humane environment.</p>
+                        <p>There is an increasing desire for inner and outer peace; for orientation and clarity; for effective leadership and personal and organizational growth; for responsible, mindful action grounded in systemic awareness; for mutual respect; and, above all, for a profound sense of belonging.</p>
+                        <p>Our client work spans aviation, hospitality, automobile industry, manufacturing, med-tech, fin-tech, finance, education, artificial intelligence, and governmental institutions. Some of the client work includes, but is not limited to Marriott, Bosch, Canva, Boeing, Siemens, Volkswagen, MAN, TAAG, Merck, and Fortune 500 leadership teams. We have worked with organizations and institutions, as well as with participants from across Europe, the Americas, Africa, and the Middle East, in more than 15 countries spanning Sweden, Germany, Italy, Austria, Spain, Romania, Portugal, the United Kingdom, the United States of America, Chile, Ecuador, Brazil, Argentina, South Africa, Angola, Iran and Israel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="pull-quote" style="--pq-bg:url(https://images.pexels.com/photos/34637954/pexels-photo-34637954.jpeg?auto=compress&cs=tinysrgb&w=1600);">
+            <div class="wrap">
+                <blockquote>“Human beings have a responsibility to work against the atomization of individuals and the struggle of all against all. In doing so, they contribute to the unification of the world.”
+                    <cite>— Pierre Teilhard de Chardin (1881–1955) French Jesuit priest, philosopher, anthropologist, and paleontologist.</cite>
+                </blockquote>
+            </div>
+        </div>
+
+        <section class="section alt">
+            <div class="wrap">
+                <span class="label-quiet reveal">Align the system</span>
+                <h2 class="headline reveal u-mb-xxl">What are the next steps?</h2>
+
+                <div class="reveal">
+                    <div class="step-row">
+                        <div><p class="step-if">If</p><p>your organization is experiencing symptoms such as low motivation, recurring conflict, or internal power struggles</p></div>
+                        <div><p class="step-then">Then</p><p><b>begin by raising leaders' awareness of systemic leadership principles and invest in training on systemic communication</b></p></div>
+                    </div>
+                    <div class="step-row">
+                        <div><p class="step-if">If</p><p>your organization is predominantly driven by management processes and day-to-day operations, and employee engagement relies mainly on task orientation and reward systems</p></div>
+                        <div><p class="step-then">Then</p><p><b>now is the time to develop a foundational concept for systemic organizational development, align employee development with the progression of systemic maturity, and gain practical experience through a carefully designed pilot project</b></p></div>
+                    </div>
+                    <div class="step-row">
+                        <div><p class="step-if">If</p><p>your organization is open to systems-based approaches and committed to fostering collaboration and employee development</p></div>
+                        <div><p class="step-then">Then</p><p><b>now is the ideal time to establish a systems-oriented organizational purpose and values framework while investing in the development of systemic leadership capabilities</b></p></div>
+                    </div>
+                    <div class="step-row">
+                        <div><p class="step-if">If</p><p>your organization demonstrates a strong mission, a clear vision, and genuine teamwork</p></div>
+                        <div><p class="step-then">Then</p><p><b>now is the right time to align all organizational processes with systems thinking principles and accelerate the development of high-performing teams</b></p></div>
+                    </div>
+                </div>
+
+                <p class="invitation prose reveal">Let’s get in touch to look deeper at what's trying to emerge and what's asking to mature. Let’s unearth and polish these pearls of potential.</p>
+
+                <div class="steps-cta reveal">
+                    <a href="#contact" class="btn btn-primary">Start with a Conversation</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="practitioners" class="section section-tight practitioners-head">
+            <div class="wrap">
+                <h2 class="headline reveal">About the practitioners</h2>
+            </div>
+        </section>
+
+        <div id="practitioners" class="pull-quote pull-quote--tight" style="--pq-bg:url(https://global.divhunt.com/3a9d1a29eb5aa406a5f6481afaeb69e4_142354.webp);">
+            <div class="wrap">
+                <blockquote>Every human being is born noble and is born to flourish.
+                    <cite>Adam P. Lugsch-Tehle</cite>
+                </blockquote>
+            </div>
+        </div>
+
+        <section id="practitioners" class="bio wrap">
+            <img src="assets/7b37b5eb6c3c8bca80d4bdc9bcbb42ab_11572.webp" loading="lazy" alt="Portrait of Adam P. Lugsch-Tehle." class="bio-photo reveal">
+            <div class="prose reveal">
+                <h3>Adam P. Lugsch-Tehle</h3>
+                <p>Adam P. Lugsch-Tehle is called to foster congruency and connection to self and within those he serves, connecting more people to the source of Oneness, that which he feels most affiliated with.</p>
+                <p>Vocationally, he is a seasoned existential and lifestyle coach and systemic leadership consultant. Adam brings over 20 years of applied learning in action across multiple industries, including communications, consultancy, filmmaking, education, leadership and development, and executive coaching.</p>
+                <p>With a degree in Honors Philosophy, an MAT in teaching, and a deep commitment to personal and professional development, his journey has taken him from serving Fortune 500 companies and coaching solopreneurs, entrepreneurs, and C-suite executives, to leading Emmy award-winning film projects, and ultimately to empowering individuals to reach their highest potential in service to an ever-advancing civilization.</p>
+                <p>Adam also dedicates time to families affected by substance use and process use disorders, guiding them through a specialized coaching program designed to foster hope, growth, and healing.</p>
+            </div>
+        </section>
+
+        <div id="practitioners" class="pull-quote pull-quote--tight" style="--pq-bg:url(https://global.divhunt.com/748467ed2e190f2725c9bae1c717e212_161162.webp); --pq-pos: 50% 22%;">
+            <div class="wrap">
+                <blockquote>Every person carries pearls of potential. Our work is to discover them, develop them, and help them shine.
+                    <cite>Andreas Fabian Galsterer</cite>
+                </blockquote>
+            </div>
+        </div>
+
+        <section id="practitioners" class="bio wrap bio--last">
+            <img src="assets/8d643811b38b405142dfdfc9e1d152bd_6726.webp" loading="lazy" alt="Portrait of Andreas Fabian Galsterer." class="bio-photo reveal">
+            <div class="prose reveal">
+                <h3>Andreas Fabian Galsterer</h3>
+                <p>Like a diver after pearls: searching out potential and polishing those pearls until they shine.</p>
+                <p>Andreas Fabian Galsterer specialized in systemic leadership development, systemic thinking, team effectiveness, communication, and organizational transformation. He works with leaders, teams, institutions, government, and organizations across Europe, Asia, Africa, and the Americas, supporting them in navigating complexity, strengthening collaboration, and fostering sustainable performance.</p>
+                <p>His facilitation approach combines systemic leadership, collective intelligence, emotional maturity, communication excellence, and human-centered organizational development to create meaningful and lasting impact. Applied tools range from systemic thinking, organizational constellation executive coaching and somatic timeline regressions.</p>
+                <p>For over a decade, he has supported executives, leadership teams, entrepreneurs, and organizations in strengthening collaboration, navigating complexity, and creating cultures of trust, accountability, and innovation.</p>
+            </div>
+        </section>
+
+        <section class="section section-tight logo-strip alt">
+            <div class="wrap">
+                <span class="label-quiet reveal">Our Collaborators:</span>
+                <div class="logo-marquee reveal">
+                    <div class="logo-track" id="logoTrack">
+                        <img src="assets/logos/boeing.png" loading="lazy" alt="Boeing">
+                        <img src="assets/logos/bosch.png" loading="lazy" alt="Bosch">
+                        <img src="assets/logos/canva.png" loading="lazy" alt="Canva">
+                        <img src="assets/logos/marriott.png" loading="lazy" alt="Marriott">
+                        <img src="assets/logos/merck.png" loading="lazy" alt="Merck">
+                        <img src="assets/logos/siemens.png" loading="lazy" alt="Siemens">
+                        <img src="assets/logos/volkswagen.png" loading="lazy" alt="Volkswagen">
+                        <img src="assets/logos/volkswagondigitalsolutions.png" loading="lazy" alt="Volkswagen Digital Solutions">
+                        <img src="assets/logos/taag.png" loading="lazy" alt="TAAG Angola Airlines">
+                        <img src="assets/logos/sonae.png" loading="lazy" alt="Sonae">
+                        <img src="assets/logos/sonaear.png" loading="lazy" alt="Sonae Arauco">
+                        <img src="assets/logos/bpc-banco-angola.png" loading="lazy" alt="BPC Banco Angola">
+                        <img src="assets/logos/academia-bai-angola.png" loading="lazy" alt="Academia BAI Angola">
+                        <img src="assets/logos/ina-portugese.png" loading="lazy" alt="National Institute of Administration, Portugal">
+                        <img src="assets/logos/ipa-romania.png" loading="lazy" alt="IPA Romania">
+                        <img src="assets/logos/universidadeaveiro.png" loading="lazy" alt="Universidade de Aveiro">
+                        <img src="assets/logos/universidadecato-licaportuguesa.png" loading="lazy" alt="Universidade Católica Portuguesa">
+                        <img src="assets/logos/cmcascais.png" loading="lazy" alt="Câmara Municipal de Cascais">
+                        <img src="assets/logos/hbs.png" loading="lazy" alt="Happiness Business School">
+                        <img src="assets/logos/ebbf.png" loading="lazy" alt="EBBF">
+                        <img src="assets/logos/pwnlisbon.png" loading="lazy" alt="PWN Lisbon">
+                        <img src="assets/logos/box.png" loading="lazy" alt="Box">
+                        <img src="assets/logos/mac6.png" loading="lazy" alt="Mac6">
+                        <img src="assets/logos/thespace.png" loading="lazy" alt="The Space">
+                        <img src="assets/logos/heroic.png" loading="lazy" alt="Heroic">
+                        <img src="assets/logos/humanflourishing.png" loading="lazy" alt="Human Flourishing">
+                        <img src="assets/logos/banditsystems.png" loading="lazy" alt="Bandit Systems">
+                        <img src="assets/logos/universo-logo.png" loading="lazy" alt="Universo">
+                        <img src="assets/logos/soul.png" loading="lazy" alt="Soul">
+                        <img src="assets/logos/womens-leadership-circle.png" loading="lazy" alt="Women's Leadership Circle">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="testimonials" class="section testimonials-head">
+            <div class="wrap">
+                <h2 class="headline reveal">Testimonials</h2>
+                <p class="lede reveal">What clients say after working with us.</p>
+
+                <div class="testimonial-carousel reveal">
+                    <div class="testimonial-track" id="testimonialTrack">
+                        <div class="testimonial-slide is-active">
+                            <p class="testimonial-tag">Education &nbsp;|&nbsp; Happiness Business School, Lisboa</p>
+                            <blockquote>"Management operates within the system. Leadership takes responsibility for the system. True leadership, systemic leadership, involves understanding the interconnections between social issues and addressing them in a holistic way. It was deeply inspiring."</blockquote>
+                            <p class="testimonial-attribution"><b>Madalena Carey</b> <span>CEO</span></p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p class="testimonial-tag">Hospitality &nbsp;|&nbsp; Marriott Hotel Lisboa</p>
+                            <blockquote>"The training in Systemic Leadership and Team Development was fantastic, interactive, and challenging. Thank you very much for guiding us throughout this process. We consider it an excellent foundation, with much to think about and rethink. We now have an excellent tool and a direction to follow."</blockquote>
+                            <p class="testimonial-attribution"><b>Antonio Pinto</b> <span>Diretor dos Recursos Humanos</span></p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p class="testimonial-tag">Technology &nbsp;|&nbsp; Canva</p>
+                            <blockquote>"I left the seminar with new insights and greater awareness of how I want to approach leadership in a more conscious way. It was a rich and memorable learning experience that continues to resonate."</blockquote>
+                            <p class="testimonial-attribution"><b>Ann Sophie Stoll</b> <span>Finance Operations Specialist</span></p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p class="testimonial-tag">Hospitality &nbsp;|&nbsp; Aires da Serra Hotel</p>
+                            <blockquote>"From the systemic leadership seminar, I learned that there is an alternative to a business system saturated with a lack of ethics, one that ignores the human values and principles that formed our identity as a community and brought us wellbeing. This reform in companies is as urgent and necessary as education for humanism. This systemic leadership is revolutionary because it starts from the opposite of the competitive system, which destroys relationships and mutually beneficial situations."</blockquote>
+                            <p class="testimonial-attribution"><b>Joana Oliveira</b> <span>Comunicação e Marketing</span></p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p class="testimonial-tag">Aviation &nbsp;|&nbsp; TAAG Linhas Aereas de Angola / Boeing</p>
+                            <blockquote>"Participating in this session was truly inspiring. We learned, shared, and above all reinforced the conviction that progress happens when we bring together different people with the same purpose. I take with me useful learnings and renewed motivation."</blockquote>
+                            <p class="testimonial-attribution"><b>Fabio Santos</b> <span>Head of Transformation Management Office</span></p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p class="testimonial-tag">Manufacturing &nbsp;|&nbsp; BOSCH Portugal</p>
+                            <blockquote>"With a world of emerging AI and new technologies appearing every day, it is important to continue to remember the importance of communication and its impact on our candidates and on our daily work. Thank you for your fantastic presence. My team and I would like to deeply thank you for your contributions and guidance. We are already using your suggestions on a daily basis and are definitely seeing improvements."</blockquote>
+                            <p class="testimonial-attribution"><b>Ana Luis Sousa Pereira</b> <span>People Acquisition Campus Group Leader</span></p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p class="testimonial-tag">Government &nbsp;|&nbsp; National Institute of Administration, Portugal</p>
+                            <blockquote>"The training has no flaws; excellence cannot be improved, only replicated further."</blockquote>
+                            <p class="testimonial-attribution"><b>Marius Bojor</b> <span>Head of Office</span></p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-controls">
+                        <button class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">&#8249;</button>
+                        <div class="testimonial-dots" id="testimonialDots"></div>
+                        <button class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">&#8250;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="wrap contact-grid">
+                <div class="contact-intro reveal">
+                    <span class="kicker">Contact</span>
+                    <h2 class="headline">Start with a Conversation</h2>
+                </div>
+                <form class="reveal">
+                    <div class="field">
+                        <label for="contactName">Name</label>
+                        <input id="contactName" name="name" placeholder="Name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="contactEmail">Email</label>
+                        <input id="contactEmail" name="email" type="email" placeholder="Email" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="message" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="closing">
+            <div class="wrap">
+                <blockquote>“The place God calls you to is the place where your deep gladness and the world’s deep hunger meet.”
+                    <cite>— Frederick Buechner</cite>
+                </blockquote>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p class="identity-signature">Emissaries of the Light and Architects and Wisdom Keepers of the Future.</p>
+        </div>
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 The Liminal Leadership Institute. All rights reserved.</p>
+            <nav class="footer-legal" aria-label="Legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            var toggle = document.getElementById('navToggle');
+            var nav = document.getElementById('navRoot');
+            if(toggle && nav){
+                toggle.addEventListener('click', function(){
+                    var open = nav.classList.toggle('is-open');
+                    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+                nav.querySelectorAll('.nav-mobile a').forEach(function(a){
+                    a.addEventListener('click', function(){
+                        nav.classList.remove('is-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+        })();
+
+        (function(){
+            if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            if(!('IntersectionObserver' in window)) return;
+            var items = document.querySelectorAll('.reveal');
+            var io = new IntersectionObserver(function(entries){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('is-visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+            items.forEach(function(el){ io.observe(el); });
+        })();
+
+        (function(){
+            if(!('IntersectionObserver' in window)) return;
+            var navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
+            var sections = [];
+            navLinks.forEach(function(a){
+                var id = a.getAttribute('href').slice(1);
+                var el = document.getElementById(id);
+                if(el && sections.indexOf(el) === -1) sections.push(el);
+            });
+            function setActive(id){
+                navLinks.forEach(function(a){
+                    a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+                });
+            }
+            var spy = new IntersectionObserver(function(entries){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting) setActive(entry.target.id);
+                });
+            }, { rootMargin: '-45% 0px -50% 0px' });
+            sections.forEach(function(el){ spy.observe(el); });
+        })();
+
+        (function(){
+            var track = document.getElementById('logoTrack');
+            if(!track) return;
+            var originalImgs = Array.prototype.slice.call(track.children);
+            originalImgs.forEach(function(img){
+                var clone = img.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                track.appendChild(clone);
+            });
+        })();
+
+        (function(){
+            var slides = document.querySelectorAll('.testimonial-slide');
+            var dotsWrap = document.getElementById('testimonialDots');
+            var prevBtn = document.getElementById('testimonialPrev');
+            var nextBtn = document.getElementById('testimonialNext');
+            if(!slides.length || !dotsWrap) return;
+
+            var current = 0;
+            var dots = [];
+
+            slides.forEach(function(_, i){
+                var dot = document.createElement('button');
+                dot.className = 'testimonial-dot' + (i === 0 ? ' is-active' : '');
+                dot.setAttribute('aria-label', 'Show testimonial ' + (i + 1));
+                dot.addEventListener('click', function(){ show(i); });
+                dotsWrap.appendChild(dot);
+                dots.push(dot);
+            });
+
+            function show(index){
+                slides[current].classList.remove('is-active');
+                dots[current].classList.remove('is-active');
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('is-active');
+                dots[current].classList.add('is-active');
+            }
+
+            prevBtn.addEventListener('click', function(){ show(current - 1); });
+            nextBtn.addEventListener('click', function(){ show(current + 1); });
+        })();
+    </script>
+
+</body>
+</html>
