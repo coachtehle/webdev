@@ -785,6 +785,10 @@
         .field textarea{ min-height: 130px; resize: vertical; }
         form .btn{ align-self: flex-start; }
 
+        .contact-thanks{ max-width: 60ch; }
+        .contact-thanks h3{ font-size: 1.5rem; margin-bottom: 12px; }
+        .contact-thanks p{ color: var(--ink-soft); }
+
         /* ============================================================
            CLOSING
         ============================================================ */
@@ -1571,7 +1575,12 @@
                     <span class="kicker">Contact</span>
                     <h2 class="headline">Start with a Conversation</h2>
                 </div>
-                <form class="reveal">
+                <form class="reveal" id="contactForm" action="https://formsubmit.co/LT@aplt.me" method="POST">
+                    <input type="hidden" name="_subject" value="New inquiry from The Liminal Leadership Institute website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="index.html?sent=true#contact">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="field">
                         <label for="contactName">Name</label>
                         <input id="contactName" name="name" placeholder="Name" autocomplete="name" required>
@@ -1586,6 +1595,10 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                <div class="contact-thanks" id="contactThanks" hidden>
+                    <h3>Thank you.</h3>
+                    <p>Your message has been sent. We'll be in touch soon.</p>
+                </div>
             </div>
         </section>
 
@@ -1665,6 +1678,19 @@
                 });
             }, { rootMargin: '-45% 0px -50% 0px' });
             sections.forEach(function(el){ spy.observe(el); });
+        })();
+
+        (function(){
+            var form = document.getElementById('contactForm');
+            var thanks = document.getElementById('contactThanks');
+            if(!form || !thanks) return;
+            if(new URLSearchParams(window.location.search).get('sent') === 'true'){
+                form.hidden = true;
+                thanks.hidden = false;
+                var url = new URL(window.location.href);
+                url.searchParams.delete('sent');
+                window.history.replaceState({}, '', url.pathname + url.search + '#contact');
+            }
         })();
 
         (function(){
